@@ -17,9 +17,15 @@
     - name: Install docker python
       pip: name=docker-py
   tasks:
-    - name: Create Apache container app
+    - name: Create Apache container webapp
       docker_container:
         name: webapp
         image: httpd
         ports:
           - "80:80"
+    - name: Create nginx container webapp
+      docker_container:
+        name: webapp2
+        image: nginx
+        ports:
+          - "8080:80"
