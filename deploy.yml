@@ -23,7 +23,7 @@
         image: httpd
         ports:
           - "80:80"
-    - name: Create nginx container webapp
+    - name: Create nginx container webapp2
       docker_container:
         name: webapp2
         image: nginx
